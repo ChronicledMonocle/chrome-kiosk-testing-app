@@ -20,8 +20,11 @@ chrome.app.runtime.onLaunched.addListener(function () {
                     e.preventDefault();
                     // e.targetUrl contains the target URL of the original link click
                     // or window.open() call: use it to open your own window to it.
-
-                    window.open(e.targetUrl);
+                    
+		    //Test to make sure the call is working
+		    window.open(e.targetUrl);
+		    //Debug Console output to verify this is executing.  Disable before production.
+		    console.info("webviewNW completed executing!");
                 });
             };
         }
