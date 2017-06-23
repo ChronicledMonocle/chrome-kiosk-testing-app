@@ -13,11 +13,12 @@ chrome.app.runtime.onLaunched.addListener(function () {
 
             NWLoader.contentWindow.onload = function () {
 
-
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
                 webviewNW.addEventListener('newwindow', function (e) {
 
+		    //This is a built in function to disable the blocking of new window events and set a "timer" for the garbage collector to "clean up" after a period of time.
                     e.preventDefault();
+
                     // e.targetUrl contains the target URL of the original link click
                     // or window.open() call: use it to open your own window to it.
                     
