@@ -2,10 +2,6 @@ function updateWebviews() {
     var webview = document.querySelector("webview");
     webview.style.height = document.documentElement.clientHeight + "px";
     webview.style.width = document.documentElement.clientWidth + "px";
-
-
-
-    console.info('****** RESIZING *********');
 };
 
 
@@ -17,23 +13,13 @@ chrome.app.runtime.onLaunched.addListener(function () {
 
         {
             //'outerBounds': { 'width': 1024,'height': 768 },
-           'state': 'maximized'
-            //'state': 'fullscreen'
-
+           'state': 'fullscreen'
         },
 
         function (win) {
 
-            console.info('uhh', win.contentWindow);
-
-
-             //win.contentWindow.onload = function () {
-             //       console.info('****** LOADING *********');
-             //};
-
             win.contentWindow.onload = function () {
 
-                //updateWebviews();
 
                 var webview = win.contentWindow.document.querySelector('#testframe');
                 webview.addEventListener('newwindow', function (e) {
