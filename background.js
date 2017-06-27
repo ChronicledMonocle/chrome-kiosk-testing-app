@@ -3,8 +3,7 @@ chrome.app.runtime.onLaunched.addListener(function () {
   chrome.app.window.create(
         'window.html',
         {
-            //'outerBounds': { 'width': 1024,'height': 768 },
-           'state': 'maximized'
+          id: "mainwin"
         },
 
         function (NWLoader) {
@@ -12,9 +11,12 @@ chrome.app.runtime.onLaunched.addListener(function () {
           NWLoader.contentWindow.onload = function () {
 
                 var closebutton = NWLoader.contentWindow.document.querySelector('#close');
+
+                //Close event
                 closebutton.addEventListener('click',function (e) {
                   console.info("Close window event triggered!");
-                  chrome.app.window.current().close();
+                  e.view.close();
+                  //chrome.app.window.current().close("mainwin");
                 });
 
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
@@ -27,10 +29,12 @@ chrome.app.runtime.onLaunched.addListener(function () {
                   // or window.open() call: use it to open your own window to it.
 
                   //Test to make sure the call is working
-                  window.open(e.targetUrl);
+                  //window.open(e.targetUrl);
+
+                  webviewNW.getAttributeNode("src").value = e.targetUrl;
 
                   //Debug Console output to verify this is executing.  Disable before production.
-                  console.info("webviewNW completed executing!");
+                  console.log(webviewNW);
                 });
             };
         }
