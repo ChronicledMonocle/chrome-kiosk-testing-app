@@ -1,4 +1,4 @@
-function (NWLoader) {
+function getloader (NWLoader) {
 
 NWLoader.contentWindow.onload = function () {
 
@@ -20,5 +20,5 @@ NWLoader.contentWindow.onload = function () {
 			//Debug Console output to verify this is executing.  Disable before production.
 			console.info("webviewNW completed executing!");
 		});
-	};
+};
 };
