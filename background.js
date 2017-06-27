@@ -2,20 +2,21 @@ chrome.app.runtime.onLaunched.addListener(function () {
 
   chrome.app.window.create(
         'window.html',
-
         {
             //'outerBounds': { 'width': 1024,'height': 768 },
            'state': 'maximized'
         },
-
+        
         function (NWLoader) {
 
           NWLoader.contentWindow.onload = function () {
+
                 var closebutton = NWLoader.contentWindow.document.querySelector('#close');
                 closebutton.addEventListener('click',function (e) {
                   console.info("Close window event triggered!");
                   chrome.app.window.current().close();
                 });
+
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
                 webviewNW.addEventListener('newwindow', function (e) {
 
