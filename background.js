@@ -6,7 +6,7 @@ chrome.app.runtime.onLaunched.addListener(function () {
             //'outerBounds': { 'width': 1024,'height': 768 },
            'state': 'maximized'
         },
-        
+
         function (NWLoader) {
 
           NWLoader.contentWindow.onload = function () {
