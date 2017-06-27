@@ -1,5 +1,5 @@
 {
-  "name": "PrepNet Testing Application",
+  "name": "Testing Application",
   "description": "This application is designed to provide a locked down testing environment for students to use on Chromebooks in Kiosk Mode",
   "version": "0.1",
   "manifest_version": 2,

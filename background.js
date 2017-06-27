@@ -17,7 +17,6 @@ chrome.app.runtime.onLaunched.addListener(function () {
                 closebutton.addEventListener('click',function (e) {
                   console.info("Close window event triggered!");
                   e.view.close();
-                  //chrome.app.window.current().close("mainwin");
                 });
 
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
@@ -33,9 +32,6 @@ chrome.app.runtime.onLaunched.addListener(function () {
                   //window.open(e.targetUrl);
 
                   webviewNW.getAttributeNode("src").value = e.targetUrl;
-
-                  //Debug Console output to verify this is executing.  Disable before production.
-                  console.log(webviewNW);
                 });
             };
         }
