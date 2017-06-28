@@ -24,7 +24,7 @@ chrome.app.runtime.onLaunched.addListener(function () {
                 //Refresh event
                 restartbutton.addEventListener('click',function (e) {
                   console.info("Restart event triggered!");
-                  chrome.runtime.reload();
+                  chrome.runtime.restart();
                 });
 
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
