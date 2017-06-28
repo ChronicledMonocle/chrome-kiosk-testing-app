@@ -5,4 +5,4 @@ To use, replace the URL in the window.html file with whatever starting URL you'd
 new window requests, and other stuff properly from there.  I recommend using a combination of Google Sites and Google Forms for
 assessments, if you're a Apps for Education organization.  
 
-This is a version 0.1 of this application and more features such as a restart button, ChromeVox support, and much more are planned.  
+This is a version 0.2 of this application and more features such as a TTS support, ChromeVox support, and much more are planned.  
