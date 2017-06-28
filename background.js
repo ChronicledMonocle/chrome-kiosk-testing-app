@@ -19,7 +19,16 @@ chrome.app.runtime.onLaunched.addListener(function () {
                   e.view.close();
                 });
 
+                var restartbutton = NWLoader.contentWindow.document.querySelector('#restart');
+
+                //Refresh event
+                restartbutton.addEventListener('click',function (e) {
+                  console.info("Restart event triggered!");
+                  chrome.runtime.reload();
+                });
+
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
+
                 webviewNW.addEventListener('newwindow', function (e) {
 
                   //This is a built in function to disable the blocking of new window events and set a "timer" for the garbage collector to "clean up" after a period of time.
