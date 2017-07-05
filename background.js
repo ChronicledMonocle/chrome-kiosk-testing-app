@@ -4,12 +4,15 @@ chrome.app.runtime.onLaunched.addListener(function () {
         'window.html',
         {
           id: "mainwin",
-          state: "fullscreen"
+          state: "fullscreen",
+          alwaysOnTop: true
         },
 
         function (NWLoader) {
 
           NWLoader.contentWindow.onload = function () {
+
+                console.log(NWLoader);
 
                 var closebutton = NWLoader.contentWindow.document.querySelector('#close');
 
@@ -26,12 +29,6 @@ chrome.app.runtime.onLaunched.addListener(function () {
                   console.info("Restart event triggered!");
                   chrome.runtime.reload();
                 });
-
-                //Detect if student leaves app focus
-                chrome.windows.onFocusChanged = function(testWindow) {
-                    console.log(testWindow);
-                    testWindow.view.close();
-                };
 
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
 
