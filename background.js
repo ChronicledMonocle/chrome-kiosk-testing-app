@@ -4,7 +4,7 @@ chrome.app.runtime.onLaunched.addListener(function () {
         'window.html',
         {
           id: "mainwin",
-          state: "maximized"
+          state: "fullscreen"
         },
 
         function (NWLoader) {
@@ -24,8 +24,20 @@ chrome.app.runtime.onLaunched.addListener(function () {
                 //Refresh event
                 restartbutton.addEventListener('click',function (e) {
                   console.info("Restart event triggered!");
-                  chrome.runtime.restart();
+                  chrome.runtime.reload();
                 });
+
+                //Detect if student leaves app focus
+                //var testwindow = chrome.app.window.current();
+
+                //chrome.windows.onFocusChanged.addListener(function(testwindow) {
+                  //if (testwindow == chrome.windows.WINDOW_ID_NONE) {
+                    //testwindow.view.close();
+                  //}
+                  //else {
+                    //console.info("App is in focus");
+                  //}
+                //});
 
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
 

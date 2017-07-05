@@ -1,6 +1,6 @@
 {
   "name": "Testing Application",
-  "description": "This application is designed to provide a locked down testing environment for students to use on Chromebooks in Kiosk Mode",
+  "description": "This application is designed to provide a locked down testing environment for students to use on Chromebooks",
   "version": "0.3",
   "manifest_version": 2,
   "app": {
@@ -8,7 +8,7 @@
       "scripts": ["background.js"]
     }
   },
-    "kiosk_enabled":true,
+    "kiosk_enabled":false,
     "icons": {
         "128": "icon.png"
     },
