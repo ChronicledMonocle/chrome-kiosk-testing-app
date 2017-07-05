@@ -28,24 +28,10 @@ chrome.app.runtime.onLaunched.addListener(function () {
                 });
 
                 //Detect if student leaves app focus
-                var testWindow = chrome.app.window.current();
-
-                chrome.windows.onFocusChanged.addListener(function(testWindow) {
-                  if (testWindow == chrome.windows.WINDOW_ID_NONE) {
+                chrome.windows.onFocusChanged = function(testWindow) {
+                    console.log(testWindow);
                     testWindow.view.close();
-                  }
-                  else {
-                    console.info("App is in focus");
-                  }
-                });
-
-                //Detect if student tried to paste content into the app
-                var pasteBlocker = NWLoader.document.getElementByTagName('webview');
-
-                pasteBlocker.onpaste = function(e) {
-                  console.info("Paste Event Detected!")
-                  e.preventDefault();
-                }
+                };
 
                 var webviewNW = NWLoader.contentWindow.document.querySelector('#testframe');
 
