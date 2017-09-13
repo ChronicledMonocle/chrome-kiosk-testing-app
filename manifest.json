@@ -1,7 +1,7 @@
 {
-  "name": "Testing Application",
-  "description": "This application is designed to provide a locked down testing environment for students to use on Chromebooks",
-  "version": "0.4",
+  "name": "PrepNet Schools School Kiosk",
+  "description": "This application is designed to provide a kiosk experience for parents and students",
+  "version": "0.1",
   "manifest_version": 2,
   "app": {
     "background": {
