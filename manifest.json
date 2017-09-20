@@ -8,7 +8,7 @@
       "scripts": ["background.js"]
     }
   },
-    "kiosk_enabled":false,
+    "kiosk_enabled":true,
     "icons": {
         "128": "icon.png"
     },
