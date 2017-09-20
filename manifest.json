@@ -1,7 +1,7 @@
 {
   "name": "PrepNet Schools School Kiosk",
   "description": "This application is designed to provide a kiosk experience for parents and students",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
   "app": {
     "background": {
