@@ -1,14 +1,14 @@
 {
-  "name": "Testing Application",
+  "name": "PrepNet Testing Application",
   "description": "This application is designed to provide a locked down testing environment for students to use on Chromebooks",
-  "version": "0.4",
+  "version": "0.5",
   "manifest_version": 2,
   "app": {
     "background": {
       "scripts": ["background.js"]
     }
   },
-    "kiosk_enabled":false,
+    "kiosk_enabled":true,
     "icons": {
         "128": "icon.png"
     },
