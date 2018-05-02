@@ -12,8 +12,9 @@
     "icons": {
         "128": "icon.png"
     },
-  "permissions": [
-    "webview",
-    "alwaysOnTopWindows"
+    "permissions": [
+      "webview",
+      "alwaysOnTopWindows",
+      "power"
   ]
 }
