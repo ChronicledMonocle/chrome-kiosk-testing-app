@@ -24,7 +24,7 @@ chrome.app.runtime.onLaunched.addListener(function () {
 
                 var restartbutton = NWLoader.contentWindow.document.querySelector('#restart');
 
-                //Refresh event
+                //Restart event
                 restartbutton.addEventListener('click',function (e) {
                   console.info("Restart event triggered!");
                   chrome.runtime.restart();
