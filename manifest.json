@@ -1,7 +1,7 @@
 {
-  "name": "PrepNet Testing Application",
-  "description": "This application is designed to provide a locked down testing environment for students to use on Chromebooks",
-  "version": "0.5",
+  "name": "PrepNet Summer Testing Application",
+  "description": "This application is designed to provide a locked down testing environment for students to use on Chromebooks for Summer Academy",
+  "version": "0.1",
   "manifest_version": 2,
   "app": {
     "background": {
